@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:SolarSystem"
+             x:Class="SolarSystem.ShellPage">
+    <Shell.FlyoutHeader>
+        <Frame BackgroundColor="DeepSkyBlue">
+            <Label Text="Menu"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center"  FontSize="15" FontAttributes="Bold"/>
+        </Frame>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Planets" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Home" Icon="home.png">
+            <views:HomePage/>
+        </ShellContent>
+        <ShellContent Title="Planets" Icon="Planets.png">
+            <views:Planets/>
+        </ShellContent>
+        <ShellContent Title="Sun" Icon="Sun.png">
+            <views:SunPage/>
+        </ShellContent>
+        <ShellContent Title="Moons" Icon="Moons.png">
+            <views:MoonsPage/>
+        </ShellContent>
+    </FlyoutItem>
+</Shell>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarSystem.Planets">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="Green">
+                <Label Text="Planets" HorizontalOptions="Center" Margin="20" FontSize="40"
+                       TextColor="Black" TextDecorations="Underline" FontAttributes="Bold,Italic"/>
+            </Frame>
+                <Button x:Name="Mercury" Text="Mercury" Padding="20" Clicked="Mercury_Clicked"/>
+                <Button x:Name="Venus" Text="Venus" Padding="20" Clicked="Venus_Clicked"/>
+                <Button x:Name="Earth" Text="Earth" Padding="20" Clicked="Earth_Clicked"/>
+                <Button x:Name="Mars" Text="Mars" Padding="20" Clicked="Mars_Clicked"/>
+                <Button x:Name="Jupiter" Text="Jupiter" Padding="20" Clicked="Jupiter_Clicked"/>
+                <Button x:Name="Saturn" Text="Saturn" Padding="20" Clicked="Saturn_Clicked"/>
+                <Button x:Name="Uranus" Text="Uranus" Padding="20" Clicked="Uranus_Clicked"/>
+                <Button x:Name="Neptune" Text="Neptune" Padding="20" Clicked="Neptune_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

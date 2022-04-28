@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SolarSystem.MoonsPage">
+    <ContentPage.Content>
+        <StackLayout>
+        <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="Gray">
+                <Label Text="Moons" HorizontalOptions="Center" Margin="5" FontSize="40"
+                       TextColor="Black" TextDecorations="Underline" FontAttributes="Bold,Italic"/>
+            </Frame>
+                    <ListView x:Name="MoonsListView" ItemTapped="MoonsListView_ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                                        <Label Text="{Binding Name}" TextColor="Black" VerticalOptions="Center"/>
+                                        <Label Text=" | Mother planet: " TextColor="Black" VerticalOptions="Center"/>
+                                        <Label Text="{Binding MotherPlanet}" TextColor="Black" VerticalOptions="Center" />
+                                        <ImageButton x:Name="DeleteMoon" HorizontalOptions="EndAndExpand"
+                                                     Source="Trashcan.png" Clicked="DeleteMoon_Clicked"
+                                                     Padding="4" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+        </StackLayout>
+        </ScrollView>
+            <Frame VerticalOptions="End">
+            <Button x:Name="AddMoon" Text="add new moon" VerticalOptions="End" Clicked="AddMoon_Clicked"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
